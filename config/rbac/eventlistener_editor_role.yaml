@@ -1,0 +1,24 @@
+# permissions for end users to edit eventlisteners.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: eventlistener-editor-role
+rules:
+- apiGroups:
+  - triggers.gitctl.com
+  resources:
+  - eventlisteners
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - triggers.gitctl.com
+  resources:
+  - eventlisteners/status
+  verbs:
+  - get

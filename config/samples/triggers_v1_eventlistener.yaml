@@ -1,0 +1,6 @@
+apiVersion: triggers.gitctl.com/v1
+kind: EventListener
+metadata:
+  name: eventlistener-sample
+spec:
+  # TODO(user): Add fields here
